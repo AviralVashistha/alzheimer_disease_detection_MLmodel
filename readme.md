@@ -1,3 +1,9 @@
+#### This project was done under IIT Roorkee.
+
+---
+
+
+
 # Alzheimer's Disease Detection Using Machine Learning
 
 This project was completed as part of an internship at IIT Roorkee, running from June 1 to July 15, 2024. The primary objective was to develop a machine learning model to detect Alzheimer's disease. The model was built using a dataset obtained from Kaggle, and several machine learning techniques were employed to optimize the performance.
