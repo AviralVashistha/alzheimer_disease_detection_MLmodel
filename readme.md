@@ -1,81 +1,59 @@
-### About the Dataset
+# Alzheimer's Disease Detection Using Machine Learning
 
-This dataset provides comprehensive health information for 2,149 patients, each uniquely identified with IDs ranging from 4751 to 6900. It includes demographic details, lifestyle factors, medical history, clinical measurements, cognitive and functional assessments, symptoms, and a diagnosis of Alzheimer's Disease. This data is ideal for researchers and data scientists aiming to explore factors associated with Alzheimer's, develop predictive models, and perform statistical analyses.
+This project was completed as part of an internship at IIT Roorkee, running from June 1 to July 15, 2024. The primary objective was to develop a machine learning model to detect Alzheimer's disease. The model was built using a dataset obtained from Kaggle, and several machine learning techniques were employed to optimize the performance.
 
-### Table of Contents
-1. Patient Information
-    - Patient ID
-    - Demographic Details
-    - Lifestyle Factors
-    - Medical History
-    - Clinical Measurements
-    - Cognitive and Functional Assessments
-    - Symptoms
-    - Diagnosis Information
-    - Confidential Information
+## Project Overview
 
-### Patient Information
+Alzheimer's disease is a progressive neurological disorder that leads to memory loss and cognitive decline. Early detection is crucial for timely intervention, and machine learning models can assist in diagnosing the disease from medical data.
 
-**Patient ID**
-- **PatientID**: Unique identifier assigned to each patient (4751 to 6900).
+### Key Features:
 
-**Demographic Details**
-- **Age**: The age of the patients ranges from 60 to 90 years.
-- **Gender**: Gender of the patients, where 0 represents Male and 1 represents Female.
-- **Ethnicity**: The ethnicity of the patients, coded as follows:
-    - 0: Caucasian
-    - 1: African American
-    - 2: Asian
-    - 3: Other
-- **EducationLevel**: The education level of the patients, coded as follows:
-    - 0: None
-    - 1: High School
-    - 2: Bachelor's
-    - 3: Higher
+- **Exploratory Data Analysis (EDA):** A thorough analysis was conducted to understand the dataset and the relationships between variables.
+- **Machine Learning Models:** Five different models were implemented:
 
-**Lifestyle Factors**
-- **BMI**: Body Mass Index of the patients, ranging from 15 to 40.
-- **Smoking**: Smoking status, where 0 indicates No and 1 indicates Yes.
-- **AlcoholConsumption**: Weekly alcohol consumption in units, ranging from 0 to 20.
-- **PhysicalActivity**: Weekly physical activity in hours, ranging from 0 to 10.
-- **DietQuality**: Diet quality score, ranging from 0 to 10.
-- **SleepQuality**: Sleep quality score, ranging from 4 to 10.
+  1. K-Nearest Neighbors (KNN)
+  2. Random Forest Classifier
+  3. Support Vector Machine (SVM)
+  4. Decision Tree
+  5. Neural Networks
+- **Train-Test Splits:** Multiple train-test ratios (90:10, 80:20, 70:30, 60:40, 50:50) were tested to evaluate model performance.
+- **Model Evaluation:** The Random Forest model with an 80:20 train-test split was found to be the most accurate, with the best F1 score.
+- **Explainable AI (XAI):** The model's decisions were explained using the LIME technique, providing insights into the decision-making process.
 
-**Medical History**
-- **FamilyHistoryAlzheimers**: Family history of Alzheimer's Disease, where 0 indicates No and 1 indicates Yes.
-- **CardiovascularDisease**: Presence of cardiovascular disease, where 0 indicates No and 1 indicates Yes.
-- **Diabetes**: Presence of diabetes, where 0 indicates No and 1 indicates Yes.
-- **Depression**: Presence of depression, where 0 indicates No and 1 indicates Yes.
-- **HeadInjury**: History of head injury, where 0 indicates No and 1 indicates Yes.
-- **Hypertension**: Presence of hypertension, where 0 indicates No and 1 indicates Yes.
+For more details, please refer to the report file located in the `findings` folder.
 
-**Clinical Measurements**
-- **SystolicBP**: Systolic blood pressure, ranging from 90 to 180 mmHg.
-- **DiastolicBP**: Diastolic blood pressure, ranging from 60 to 120 mmHg.
-- **CholesterolTotal**: Total cholesterol levels, ranging from 150 to 300 mg/dL.
-- **CholesterolLDL**: Low-density lipoprotein cholesterol levels, ranging from 50 to 200 mg/dL.
-- **CholesterolHDL**: High-density lipoprotein cholesterol levels, ranging from 20 to 100 mg/dL.
-- **CholesterolTriglycerides**: Triglycerides levels, ranging from 50 to 400 mg/dL.
+## Dataset
 
-**Cognitive and Functional Assessments**
-- **MMSE**: Mini-Mental State Examination score, ranging from 0 to 30. Lower scores indicate cognitive impairment.
-- **FunctionalAssessment**: Functional assessment score, ranging from 0 to 10. Lower scores indicate greater impairment.
-- **MemoryComplaints**: Presence of memory complaints, where 0 indicates No and 1 indicates Yes.
-- **BehavioralProblems**: Presence of behavioral problems, where 0 indicates No and 1 indicates Yes.
-- **ADL**: Activities of Daily Living score, ranging from 0 to 10. Lower scores indicate greater impairment.
+The dataset used in this project was sourced from Kaggle and includes a variety of features that are relevant to Alzheimer's diagnosis.
 
-**Symptoms**
-- **Confusion**: Presence of confusion, where 0 indicates No and 1 indicates Yes.
-- **Disorientation**: Presence of disorientation, where 0 indicates No and 1 indicates Yes.
-- **PersonalityChanges**: Presence of personality changes, where 0 indicates No and 1 indicates Yes.
-- **DifficultyCompletingTasks**: Presence of difficulty completing tasks, where 0 indicates No and 1 indicates Yes.
-- **Forgetfulness**: Presence of forgetfulness, where 0 indicates No and 1 indicates Yes.
+## Installation and Usage
 
-**Diagnosis Information**
-- **Diagnosis**: Diagnosis status for Alzheimer's Disease, where 0 indicates No and 1 indicates Yes.
+1. **Clone the Repository:**
 
-**Confidential Information**
-- **DoctorInCharge**: This column contains confidential information about the doctor in charge, with "XXXConfid" as the value for all patients.
+   ```bash
+   git clone https://github.com/your-username/alzheimers-disease-detection.git
+   cd alzheimers-disease-detection
+   ```
+2. **Install Dependencies:**
+   Make sure you have Python installed. Install the required packages using:
 
-### Conclusion
-This dataset offers extensive insights into the factors associated with Alzheimer's Disease, including demographic, lifestyle, medical, cognitive, and functional variables. It is ideal for developing predictive models, conducting statistical analyses, and exploring the complex interplay of factors contributing to Alzheimer's Disease.
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Run the Jupyter Notebooks:**
+   The analysis, model training, and evaluation are documented in Jupyter Notebooks. Open them in Jupyter Notebook or Jupyter Lab.
+4. **Explore the Findings:**
+   The detailed report with all the findings is available in the `findings` folder.
+
+## Results
+
+The Random Forest model with an 80:20 train-test split achieved the highest accuracy and F1 score. The results of other models and splits are also documented in the report.
+
+## Conclusion
+
+This project demonstrates the application of machine learning techniques to detect Alzheimer's disease using publicly available data. The use of XAI methods like LIME further adds value by making the model's predictions interpretable.
+
+## Acknowledgments
+
+- Thanks to IIT Roorkee for providing the opportunity to work on this project.
+- Special thanks to the Kaggle community for providing the dataset.
